@@ -87,6 +87,9 @@ RUN apt-get install -y --no-install-recommends curl locales sudo && \
 
 # Add user jenkins to the image
 RUN adduser --system --quiet --uid ${uid} --group --disabled-login ${user}
+#RUN mkdir -p /home/jenkins_agent/jenkins_cuda_10
+#RUN chown -R jenkins /home/jenkins_agent/jenkins_cuda_10 
+#RUN chmod -R 777 /home/jenkins_agent/jenkins_cuda_10
 
 # USER jenkins
 RUN echo "${user} ALL = NOPASSWD : /usr/bin/apt-get" >> /etc/sudoers.d/jenkins-can-install 

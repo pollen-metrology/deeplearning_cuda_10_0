@@ -32,12 +32,7 @@
 
 
 #mkdir /home/jenkins
-#chown -R jenkins /home/jenkins
-
-#mkdir /home/jenkins_agent
-#chown -R jenkins /home/jenkins_agent
-
-chmod -R jenkins /home/jenkins_agent/jenkins_cuda_10
+chown -R jenkins /home/jenkins
 
 #if [ $# -eq 1 ]; then
 
@@ -113,7 +108,7 @@ chmod -R jenkins /home/jenkins_agent/jenkins_cuda_10
 #		-headless $TUNNEL $URL $WORKDIR $OPT_JENKINS_SECRET $OPT_JENKINS_AGENT_NAME"
 
 #echo $JENKIN_CMD
-        
+#bin/bash        
 	runuser -u jenkins -- /usr/bin/java \
 		$JAVA_OPTS $JNLP_PROTOCOL_OPTS \
 		-cp /usr/share/jenkins/slave.jar \
