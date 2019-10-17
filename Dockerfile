@@ -13,6 +13,10 @@
 #  --name "deeplearning_cuda_10" \
 #  --restart always \
 #  -v /home/docker/deeplearning_cuda_10/jenkins_agent/ws:/home/jenkins_agent/jenkins_cuda_10 \
+#  pollenm/deeplearning_cuda_10_0
+#
+#
+#
 #  deeplearning_cuda_10_0:latest
 #
 FROM ubuntu:18.04
