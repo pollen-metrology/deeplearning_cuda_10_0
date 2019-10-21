@@ -1,6 +1,6 @@
 # docker build --network=host -t deeplearning_cuda_10_0 .
 # docker run -it --gpus all deeplearning_cuda_10_0:latest /bin/bash
-#
+# docker build --network=host -t pollenm/deeplearning_cuda_10_0 .
 
 #docker run \
 #  -e JENKINS_URL=https://jenkins.pollen-metrology.com/ \
@@ -13,6 +13,7 @@
 #  --name "deeplearning_cuda_10" \
 #  --restart always \
 #  -v /home/docker/deeplearning_cuda_10/jenkins_agent/ws:/home/jenkins \
+#  -v /home/deeplearning_script/:/home/scripts/ \
 #  pollenm/deeplearning_cuda_10_0
 #
 #

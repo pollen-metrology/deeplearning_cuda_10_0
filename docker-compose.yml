@@ -1,0 +1,19 @@
+# problem to pass flag "--gpus=all"
+version: "2"
+services:
+  deeplearning_cuda_10:
+    container_name: deeplearning_cuda_10_TEST
+    image: pollenm/deeplearning_cuda_10_0
+    environment:
+      - JENKINS_URL=https://jenkins.pollen-metrology.com/
+      - JENKINS_SECRET=54ca4eb8ab22483fcf6a2dc8525d4dff54640eec5b6f68c61575e65b70a164cd
+      - JENKINS_AGENT_WORKDIR=/home/jenkins
+      - JENKINS_NAME=Deep_Learning_cuda_10
+#    command: nvidia-smi  
+#    ports:
+#      - "21:21"
+#     - "42042:21"
+    network_mode: "host"
+    volumes:
+      - /home/docker/deeplearning_cuda_10/jenkins_agent/ws/:/home/jenkins/
+      - /home/deeplearning_script/:/home/scripts/

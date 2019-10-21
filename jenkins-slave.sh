@@ -33,6 +33,7 @@
 
 #mkdir /home/jenkins
 chown -R jenkins /home/jenkins
+chown -R jenkins /home/scripts
 
 #if [ $# -eq 1 ]; then
 
