@@ -97,6 +97,15 @@ RUN echo "${user} ALL = NOPASSWD : /usr/bin/apt-get" >> /etc/sudoers.d/jenkins-c
 
 #RUN mkdir -p /home/pollen && chown jenkins:jenkins /home/pollen && ln -s /home/pollen /pollen
 
+# Add scikit
+RUN pip3 install scikit-image
+
+# Add imgaug
+RUN pip3 install imgaug
+
+# Add keras
+RUN pip3 install keras
+
 
 # Set the locale
 RUN locale-gen en_US.UTF-8
